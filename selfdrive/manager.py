@@ -172,7 +172,7 @@ managed_processes = {
   "controlsd": "selfdrive.controls.controlsd",
   "plannerd": "selfdrive.controls.plannerd",
   "radard": "selfdrive.controls.radard",
-  "dmonitoringd": "selfdrive.monitoring.dmonitoringd",
+  #"dmonitoringd": "selfdrive.monitoring.dmonitoringd",
   "ubloxd": ("selfdrive/locationd", ["./ubloxd"]),
   "loggerd": ("selfdrive/loggerd", ["./loggerd"]),
   "logmessaged": "selfdrive.logmessaged",
@@ -190,7 +190,7 @@ managed_processes = {
   "clocksd": ("selfdrive/clocksd", ["./clocksd"]),
   "gpsd": ("selfdrive/sensord", ["./gpsd"]),
   "updated": "selfdrive.updated",
-  "dmonitoringmodeld": ("selfdrive/modeld", ["./dmonitoringmodeld"]),
+  #"dmonitoringmodeld": ("selfdrive/modeld", ["./dmonitoringmodeld"]),
   "modeld": ("selfdrive/modeld", ["./modeld"]),
   "rtshield": "selfdrive.rtshield",
   "lanespeedd": "selfdrive.controls.lib.lane_speed",
@@ -247,21 +247,21 @@ car_started_processes = [
 
 driver_view_processes = [
   'camerad',
-  'dmonitoringd',
-  'dmonitoringmodeld'
+  #'dmonitoringd',
+  #'dmonitoringmodeld'
 ]
 
 if WEBCAM:
   car_started_processes += [
-    'dmonitoringd',
+    dmonitoringd',
     'dmonitoringmodeld',
   ]
 
 if not PC:
   car_started_processes += [
     'ubloxd',
-    'dmonitoringd',
-    'dmonitoringmodeld',
+    #'dmonitoringd',
+    #'dmonitoringmodeld',
   ]
 
 if ANDROID:
