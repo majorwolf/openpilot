@@ -247,8 +247,8 @@ car_started_processes = [
 
 driver_view_processes = [
   'camerad',
-  #'dmonitoringd',
-  #'dmonitoringmodeld'
+  'dmonitoringd',
+  'dmonitoringmodeld'
 ]
 
 if WEBCAM:
@@ -260,8 +260,8 @@ if WEBCAM:
 if not PC:
   car_started_processes += [
     'ubloxd',
-    #'dmonitoringd',
-    #'dmonitoringmodeld',
+    'dmonitoringd',
+    'dmonitoringmodeld',
   ]
 
 if ANDROID:
