@@ -253,7 +253,7 @@ driver_view_processes = [
 
 if WEBCAM:
   car_started_processes += [
-    dmonitoringd',
+    'dmonitoringd',
     'dmonitoringmodeld',
   ]
 
